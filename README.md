@@ -1,29 +1,80 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mayank Bhambhani - Screenplay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: "Courier New", Courier, monospace;
+            font-family: 'Courier Prime', 'Courier New', Courier, monospace;
             background: #fff;
             color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             text-align: center;
-            padding-top: 200px;
             opacity: 0;
             animation: fadeIn 1s forwards;
+            padding: 20px;
         }
 
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
         @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
         .fade-out { animation: fadeOut 0.5s forwards; }
 
-        .title { font-size: 32px; font-weight: bold; }
-        .subtitle { font-size: 20px; margin-top: 10px; }
-        .links { position: absolute; top: 20px; right: 20px; text-align: right; }
-        .links a { display: block; margin-top: 10px; font-weight: bold; color: #000; text-decoration: none; }
-        .arrow { font-size: 24px; position: absolute; bottom: 50px; right: 50px; transform: rotate(45deg); }
+        .title { font-size: 36px; font-weight: bold; }
+        .subtitle { font-size: 22px; margin-top: 10px; }
+
+        .links {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .links a {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #000;
+            border-radius: 5px;
+            transition: 0.3s;
+            width: 180px;
+            text-align: center;
+        }
+
+        .links a:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        .arrow {
+            font-size: 28px;
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            transform: rotate(45deg);
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .title { font-size: 28px; }
+            .subtitle { font-size: 18px; }
+            .links a { width: 150px; font-size: 16px; }
+        }
+
     </style>
 </head>
 <body>
@@ -36,7 +87,7 @@
         <a href="contact.html" class="page-link">Contact</a>
     </div>
 
-    <div class="arrow">lol</div>
+    <div class="arrow">↓</div>
 
     <script>
         document.querySelectorAll('.page-link').forEach(link => {
