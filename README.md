@@ -3,91 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Writing Portfolio</title>
+    <title>Introduction - Screenplay</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #222;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
+            font-family: "Courier New", Courier, monospace;
             background: #fff;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            color: #000;
+            padding: 40px;
+            line-height: 1.8;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
         }
-        .writing-sample {
-            border-bottom: 1px solid #ddd;
-            padding: 15px 0;
-        }
-        .writing-sample h2 {
-            margin: 0;
-            color: #444;
-        }
-        .writing-sample p {
-            font-size: 14px;
-            color: #666;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background: #007BFF;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .btn:hover {
-            background: #0056b3;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #222;
-            color: white;
-            margin-top: 20px;
-        }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+        .fade-out { animation: fadeOut 0.5s forwards; }
+
+        .nav-links { position: absolute; top: 20px; right: 20px; }
+        .nav-links a { color: #000; text-decoration: none; margin-left: 15px; font-weight: bold; }
+
+        .scene-heading { font-weight: bold; text-transform: uppercase; margin-top: 30px; }
+        .character { font-weight: bold; text-transform: uppercase; margin-top: 25px; }
+        .dialogue { margin-left: 50px; max-width: 80%; }
+        .action { margin-left: 30px; font-style: italic; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>My Writing Portfolio</h1>
-        <p>Showcasing my best work</p>
-    </header>
-    <div class="container" id="portfolio">
-        <!-- Writing samples will be added dynamically -->
+    <div class="nav-links">
+        <a href="index.html" class="page-link">Title</a>
+        <a href="portfolio.html" class="page-link">Portfolio</a>
+        <a href="contact.html" class="page-link">Contact</a>
     </div>
-    <footer>
-        <p>&copy; 2025 Your Name | All Rights Reserved</p>
-    </footer>
-    <script>
-        const samples = [
-            { title: "The Art of Storytelling", description: "An in-depth analysis of storytelling techniques.", link: "#" },
-            { title: "Writing for Impact", description: "How to create powerful and engaging narratives.", link: "#" },
-            { title: "Screenwriting Essentials", description: "A guide to crafting compelling scripts.", link: "#" }
-        ];
 
-        const portfolioDiv = document.getElementById("portfolio");
-        
-        samples.forEach(sample => {
-            const sampleDiv = document.createElement("div");
-            sampleDiv.classList.add("writing-sample");
-            sampleDiv.innerHTML = `
-                <h2>${sample.title}</h2>
-                <p>${sample.description}</p>
-                <a href="${sample.link}" class="btn">Read More</a>
-            `;
-            portfolioDiv.appendChild(sampleDiv);
+    <p class="scene-heading">INT. A CAFE - NIGHT</p>
+    <p class="action">A lone writer sits by the window, watching the city buzz around him. A notebook lies open, filled with ideas.</p>
+
+    <p class="character">MAYANK BHAMBHANI</p>
+    <p class="dialogue">"Stories are everywhere. In the silence of an empty street. In the laughter of strangers. In the chaos of a deadline. And in me."</p>
+
+    <p class="scene-heading">INTRODUCTION</p>
+    <p class="dialogue">A writer, a storyteller, a thinker. With a background in English literature and experience in digital marketing, filmmaking, and poetry, Mayank crafts narratives that inform, engage, and inspire.</p>
+
+    <script>
+        document.querySelectorAll('.page-link').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                let destination = this.getAttribute('href');
+                document.body.classList.add('fade-out');
+                setTimeout(() => { window.location.href = destination; }, 500);
+            });
         });
     </script>
 </body>
