@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction - Screenplay</title>
+    <title>Mayank Bhambhani - Screenplay</title>
     <style>
         body {
             font-family: "Courier New", Courier, monospace;
             background: #fff;
             color: #000;
-            padding: 40px;
-            line-height: 1.8;
+            text-align: center;
+            padding-top: 200px;
             opacity: 0;
             animation: fadeIn 1s forwards;
         }
@@ -19,30 +19,24 @@
         @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
         .fade-out { animation: fadeOut 0.5s forwards; }
 
-        .nav-links { position: absolute; top: 20px; right: 20px; }
-        .nav-links a { color: #000; text-decoration: none; margin-left: 15px; font-weight: bold; }
-
-        .scene-heading { font-weight: bold; text-transform: uppercase; margin-top: 30px; }
-        .character { font-weight: bold; text-transform: uppercase; margin-top: 25px; }
-        .dialogue { margin-left: 50px; max-width: 80%; }
-        .action { margin-left: 30px; font-style: italic; }
+        .title { font-size: 32px; font-weight: bold; }
+        .subtitle { font-size: 20px; margin-top: 10px; }
+        .links { position: absolute; top: 20px; right: 20px; text-align: right; }
+        .links a { display: block; margin-top: 10px; font-weight: bold; color: #000; text-decoration: none; }
+        .arrow { font-size: 24px; position: absolute; bottom: 50px; right: 50px; transform: rotate(45deg); }
     </style>
 </head>
 <body>
-    <div class="nav-links">
-        <a href="index.html" class="page-link">Title</a>
+    <div class="title">MAYANK BHAMBHANI</div>
+    <div class="subtitle">WRITER</div>
+
+    <div class="links">
+        <a href="about.html" class="page-link">Introduction</a>
         <a href="portfolio.html" class="page-link">Portfolio</a>
         <a href="contact.html" class="page-link">Contact</a>
     </div>
 
-    <p class="scene-heading">INT. A CAFE - NIGHT</p>
-    <p class="action">A lone writer sits by the window, watching the city buzz around him. A notebook lies open, filled with ideas.</p>
-
-    <p class="character">MAYANK BHAMBHANI</p>
-    <p class="dialogue">"Stories are everywhere. In the silence of an empty street. In the laughter of strangers. In the chaos of a deadline. And in me."</p>
-
-    <p class="scene-heading">INTRODUCTION</p>
-    <p class="dialogue">A writer, a storyteller, a thinker. With a background in English literature and experience in digital marketing, filmmaking, and poetry, Mayank crafts narratives that inform, engage, and inspire.</p>
+    <div class="arrow">lol</div>
 
     <script>
         document.querySelectorAll('.page-link').forEach(link => {
